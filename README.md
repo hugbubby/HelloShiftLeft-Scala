@@ -157,3 +157,4 @@ If you provide wrong credentials the handler returns `Error with your credential
 # Second test commit for rescan verification
 # Test commit 1772615532
 # Rescan test 1772616625
+# Test rescan with sandbox fix 1772617478
