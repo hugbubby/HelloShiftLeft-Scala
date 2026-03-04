@@ -161,3 +161,4 @@ If you provide wrong credentials the handler returns `Error with your credential
 # Test rescan sandbox fix 1772618347
 # Test with setting enabled 1772619614
 # Final sandbox test 1772619964
+# Prompt fix test 1772621473
