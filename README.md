@@ -153,3 +153,4 @@ After starting the service it is possible to bypass the credential check with th
 If you provide wrong credentials the handler returns `Error with your credentials!`. Syntax errors as http://localhost:8082/checkAccount/admin/x' result in the error message `A server error occurred: javax.xml.xpath.XPathExpressionException: javax.xml.transform.TransformerException: misquoted literal... expected single quote!` 
 
 
+# Test commit for rescan verification
