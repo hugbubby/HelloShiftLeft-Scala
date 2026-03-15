@@ -105,10 +105,11 @@ class CustomerController @Inject() (ws: WSClient, config: Configuration) extends
   // get /rawcustomers/{customerId}
   def getRawCustomer(customerId: String) = Action {
     if (null == customerId) throw new InvalidCustomerRequestException
-    val sqlQuery = "SELECT first_name, last_name FROM customer WHERE id = " + customerId
+    val sqlQuery = "SELECT first_name, last_name FROM customer WHERE id = :customerId"
     val rawSql = RawSqlBuilder.parse(sqlQuery).create
     val query = CustomerController.db.find(classOf[Customer])
     query.setRawSql(rawSql)
+    query.setParameter("customerId", customerId)
     val customer = query.findList.asScala
     if (null == customer || customer.isEmpty) throw new CustomerNotFoundException
     Ok(Json.toJson(customer))
